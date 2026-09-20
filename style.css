@@ -77,3 +77,39 @@ footer{border-top:1px solid var(--line);padding:30px 4.5vw;display:grid;grid-tem
  .cursor-glow{display:none}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker div{animation:none}.reveal{transition:none}.product-image:before,.garment,.cta,.circle-link{transition:none}}
+
+/* REAL DROP 001 PRODUCT PHOTOGRAPHY */
+.product-image.photo,
+.product-modal-photo.photo{
+  background-image:url("assets/drop-001.webp");
+  background-size:200% 200%;
+  background-repeat:no-repeat;
+  background-color:#080808;
+  cursor:zoom-in;
+}
+.product-image.photo.image-01,.product-modal-photo.image-01{background-position:0 0}
+.product-image.photo.image-02,.product-modal-photo.image-02{background-position:100% 0}
+.product-image.photo.image-03,.product-modal-photo.image-03{background-position:0 100%}
+.product-image.photo.image-04,.product-modal-photo.image-04{background-position:100% 100%}
+.product-image.photo:before,.product-image.photo:after{display:none}
+.product-image.photo:hover{transform:none}
+.product-modal{
+  position:fixed;z-index:260;inset:5vh 5vw;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);
+  background:#0b0b0b;border:1px solid #333;box-shadow:0 30px 100px #000;opacity:0;visibility:hidden;transform:translateY(18px) scale(.985);
+  transition:.3s ease;overflow:hidden;
+}
+.product-modal.open{opacity:1;visibility:visible;transform:none}
+.product-modal-photo{min-height:100%;border-right:1px solid #292929}
+.product-modal-copy{padding:7vw 5vw;display:flex;flex-direction:column;justify-content:center}
+.product-modal-copy h2{font-size:clamp(42px,5vw,82px);margin:0 0 18px}
+.product-modal-copy>strong{font-size:14px;font-weight:500;margin-bottom:28px}
+.product-modal-copy>p:not(.eyebrow){color:#999;line-height:1.8;font-size:12px;max-width:410px}
+.modal-meta{margin:28px 0 34px;font-size:8px;letter-spacing:.18em;color:#666}
+.modal-reserve{align-self:flex-start;background:var(--accent);border:0;color:#000;padding:16px 24px;font-size:9px;letter-spacing:.16em}
+.product-modal-close{position:absolute;right:20px;top:14px;z-index:3;background:#080808cc;border:1px solid #444;color:#fff;width:38px;height:38px;border-radius:50%;font-size:24px;line-height:1}
+@media(max-width:800px){
+  .product-modal{inset:2vh 3vw;grid-template-columns:1fr;overflow:auto}
+  .product-modal-photo{min-height:48vh;border-right:0;border-bottom:1px solid #292929}
+  .product-modal-copy{padding:30px 24px 36px}
+  .product-modal-copy h2{font-size:48px}
+}
