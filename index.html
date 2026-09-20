@@ -58,37 +58,33 @@
 
       <div class="products">
         <article class="product reveal">
-          <div class="product-image image-01">
+          <div class="product-image photo image-01" data-product="01" role="button" tabindex="0" aria-label="View VOID HOODIE">
             <span>NV / 001</span><small>480 GSM</small>
             <button class="quick-add" data-product="01">RESERVE +</button>
-            <div class="garment hoodie"></div>
           </div>
           <div class="product-info"><div><h3>VOID HOODIE</h3><p>450–480 GSM / Washed black</p></div><strong>$128</strong></div>
         </article>
 
         <article class="product reveal">
-          <div class="product-image image-02">
+          <div class="product-image photo image-02" data-product="02" role="button" tabindex="0" aria-label="View AFTERIMAGE TEE">
             <span>NV / 002</span><small>240 GSM</small>
             <button class="quick-add" data-product="02">RESERVE +</button>
-            <div class="garment tee"></div>
           </div>
           <div class="product-info"><div><h3>AFTERIMAGE TEE</h3><p>240–260 GSM / Faded black</p></div><strong>$64</strong></div>
         </article>
 
         <article class="product reveal">
-          <div class="product-image image-03">
+          <div class="product-image photo image-03" data-product="03" role="button" tabindex="0" aria-label="View UTILITY CARGO">
             <span>NV / 003</span><small>RIPSTOP</small>
             <button class="quick-add" data-product="03">RESERVE +</button>
-            <div class="garment cargo"></div>
           </div>
           <div class="product-info"><div><h3>UTILITY CARGO</h3><p>250–300 GSM / Modular fit</p></div><strong>$148</strong></div>
         </article>
 
         <article class="product reveal">
-          <div class="product-image image-04">
+          <div class="product-image photo image-04" data-product="04" role="button" tabindex="0" aria-label="View NOCTVRN CAP">
             <span>NV / 004</span><small>6 PANEL</small>
             <button class="quick-add" data-product="04">RESERVE +</button>
-            <div class="garment cap"></div>
           </div>
           <div class="product-info"><div><h3>NOCTVRN CAP</h3><p>Cotton twill / Tonal embroidery</p></div><strong>$48</strong></div>
         </article>
@@ -147,6 +143,18 @@
     <button class="checkout" type="button" id="notifyCheckout">PRE-ORDER OPENS AFTER SAMPLE APPROVAL ↗</button>
   </aside>
   <div class="overlay" id="overlay"></div>
+  <div class="product-modal" id="productModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Product details">
+    <button class="product-modal-close" id="productModalClose" aria-label="Close product view">×</button>
+    <div class="product-modal-photo photo image-01" id="modalPhoto"></div>
+    <div class="product-modal-copy">
+      <p class="eyebrow" id="modalCode">NV / 001</p>
+      <h2 id="modalTitle">VOID HOODIE</h2>
+      <strong id="modalPrice">$128</strong>
+      <p id="modalDescription">Oversized heavyweight hoodie in washed black with a double-layer hood, dropped shoulders, wide rib cuffs and tonal NOCTVRN branding.</p>
+      <div class="modal-meta" id="modalMeta">450–480 GSM / WASHED BLACK</div>
+      <button class="modal-reserve" id="modalReserve">RESERVE PIECE +</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
