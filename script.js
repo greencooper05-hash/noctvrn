@@ -15,6 +15,7 @@ document.getElementById("bagBtn").addEventListener("click",openCart);
 document.getElementById("cartClose").addEventListener("click",closeCart);
 overlay.addEventListener("click",closeCart);
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCart()});
+document.getElementById("notifyCheckout")?.addEventListener("click",()=>{document.getElementById("formMessage").textContent="PRE-ORDER DETAILS WILL OPEN AFTER SAMPLE APPROVAL.";closeCart()});
 document.getElementById("newsletterForm").addEventListener("submit",e=>{e.preventDefault();document.getElementById("formMessage").textContent="YOU'RE IN. WATCH THE DARK.";e.target.reset()});
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("visible")}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
