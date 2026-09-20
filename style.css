@@ -36,7 +36,7 @@ h1 em{display:block;font-style:normal;color:transparent;-webkit-text-stroke:1px 
 h2{font-size:clamp(50px,7.6vw,112px);line-height:.8;letter-spacing:-.075em}
 h2 span{color:transparent;-webkit-text-stroke:1px #ddd8cf}
 .section-note{color:#666662;font-size:8px;letter-spacing:.18em;line-height:1.8;text-align:right}
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:90px 24px}
+.drop-notice{display:grid;grid-template-columns:auto auto 1fr;gap:24px;align-items:center;border-top:1px solid #30302f;border-bottom:1px solid #30302f;padding:17px 0;margin:-35px 0 72px;color:#777}.drop-notice span{font-size:8px;letter-spacing:.2em;color:#555}.drop-notice strong{font-size:9px;letter-spacing:.16em;color:#b7b5ae;font-weight:600}.drop-notice p{justify-self:end;max-width:430px;font-size:9px;line-height:1.6;color:#5f5f5b}.drop-notice+ .products{margin-top:0}.products{display:grid;grid-template-columns:repeat(2,1fr);gap:90px 24px}
 .product-image{aspect-ratio:4/5;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 40%,#1b1b1b,#0c0c0c 58%,#080808)}
 .product-image:before{content:"";position:absolute;inset:7%;border:1px solid #272727;transform:rotate(-3deg);transition:transform .6s}
 .product-image:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#fff1 50%,transparent 65%);transform:translateX(-110%);transition:transform .8s}
@@ -70,7 +70,7 @@ footer{border-top:1px solid var(--line);padding:30px 4.5vw;display:grid;grid-tem
  .hero{min-height:92vh;padding:14vh 6vw 8vh;align-items:flex-end}.hero-mark{right:-1vw;top:34%;font-size:58vw}.hero-index,.scroll{display:none}.orbit-a{width:100vw;height:100vw;right:-42vw;top:8vh}.orbit-b{width:72vw;height:72vw;right:-25vw;top:23vh}
  h1{font-size:clamp(67px,18vw,120px);line-height:.77}.hero-sub{margin:42px 0 28px}
  .shop,.manifesto,.lookbook,.newsletter{padding:95px 6vw}.section-head{align-items:flex-start;margin-bottom:55px}.section-note{display:none}
- .products{grid-template-columns:1fr;gap:60px}.product-image{aspect-ratio:4/5}
+ .drop-notice{grid-template-columns:1fr;gap:9px;margin:-25px 0 55px}.drop-notice p{justify-self:start;max-width:100%}.products{grid-template-columns:1fr;gap:60px}.product-image{aspect-ratio:4/5}
  .manifesto-grid{grid-template-columns:1fr;gap:60px}.manifesto-top>span{display:none}
  .lookbook-card{min-height:70vh;padding:8vw}.lookbook-card:before{width:110vw;height:110vw;right:-45vw;top:-10vw}
  footer{grid-template-columns:1fr;gap:25px}.footer-links,footer>p{justify-self:start;justify-content:flex-start}
