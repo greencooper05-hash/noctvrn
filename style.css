@@ -160,3 +160,12 @@ footer{padding:50px clamp(24px,6vw,96px)}
  .product-image{min-height:520px}
  .shop,.manifesto,.lookbook,.newsletter{padding-left:20px;padding-right:20px}
 }
+
+/* Editorial image treatment inspired by the new NOCTVRN campaign image */
+.hero{position:relative;overflow:hidden}
+.hero:before{
+ content:"";position:absolute;inset:0;z-index:-2;
+ background:linear-gradient(90deg,rgba(7,7,7,.98) 0%,rgba(7,7,7,.76) 38%,rgba(7,7,7,.25) 72%,rgba(7,7,7,.72) 100%),url("assets/drop-001.webp") center/cover no-repeat;
+ opacity:.72;filter:grayscale(1) contrast(1.08);
+}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 72% 45%,transparent 0,rgba(0,0,0,.12) 35%,rgba(0,0,0,.7) 100%);pointer-events:none}
