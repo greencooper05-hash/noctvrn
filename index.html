@@ -3,46 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NOCTVRN — dark, minimal streetwear." />
+  <meta name="description" content="NOCTVRN — independent streetwear for the hours that don't need daylight." />
+  <meta name="theme-color" content="#070707" />
   <title>NOCTVRN — After Dark</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="noise"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
   <header class="nav">
-    <a class="logo" href="#">NOCTVRN<span>®</span></a>
-    <nav><a href="#shop">SHOP</a><a href="#manifesto">MANIFESTO</a><a href="#lookbook">LOOKBOOK</a></nav>
-    <button class="bag" id="bagBtn">BAG <span id="bagCount">0</span></button>
+    <a class="logo" href="#top">NOCTVRN<span>®</span></a>
+    <nav aria-label="Primary">
+      <a href="#shop">SHOP</a>
+      <a href="#manifesto">MANIFESTO</a>
+      <a href="#lookbook">LOOKBOOK</a>
+    </nav>
+    <button class="bag" id="bagBtn" aria-label="Open shopping bag">BAG <span id="bagCount">0</span></button>
   </header>
-  <main>
+
+  <main id="top">
     <section class="hero">
+      <div class="hero-orbit orbit-a"></div>
+      <div class="hero-orbit orbit-b"></div>
+      <div class="hero-mark" aria-hidden="true">N</div>
+
       <div class="hero-copy">
         <p class="eyebrow">NOCTVRN / 001 — AFTER DARK</p>
-        <h1>BUILT FOR<br><em>THE NIGHT.</em></h1>
+        <h1><span>BUILT FOR</span><em>THE</em><em>NIGHT.</em></h1>
         <p class="hero-sub">A study in shadow, utility, and restraint. Independent streetwear for the hours that don't need daylight.</p>
         <a class="cta" href="#shop">ENTER THE DROP <span>↘</span></a>
       </div>
-      <div class="hero-mark">N<br>V</div><div class="scroll">SCROLL TO EXPLORE ↓</div>
+
+      <div class="hero-index">001</div>
+      <div class="scroll">SCROLL TO EXPLORE ↓</div>
     </section>
-    <section class="ticker"><div>NOCTVRN — AFTER DARK — NOCTVRN — AFTER DARK — NOCTVRN — AFTER DARK —</div></section>
+
+    <section class="ticker" aria-label="Brand statement">
+      <div>NOCTVRN — AFTER DARK — NOCTVRN — AFTER DARK — NOCTVRN — AFTER DARK —</div>
+    </section>
+
     <section class="shop" id="shop">
-      <div class="section-head"><div><p class="eyebrow">01 / THE DROP</p><h2>SELECTED<br>OBJECTS.</h2></div><p class="section-note">LIMITED RUN / UNISEX<br>DESIGNED IN THE DARK</p></div>
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">01 / THE DROP</p>
+          <h2>SELECTED<br><span>OBJECTS.</span></h2>
+        </div>
+        <p class="section-note">LIMITED RUN / UNISEX<br>DESIGNED IN THE DARK</p>
+      </div>
+
       <div class="products">
-        <article class="product"><div class="product-image image-01"><span>NV / 001</span><button class="quick-add" data-product="01">ADD +</button></div><div class="product-info"><h3>VOID HOODIE</h3><p>Heavyweight / 480 GSM</p><strong>$128</strong></div></article>
-        <article class="product"><div class="product-image image-02"><span>NV / 002</span><button class="quick-add" data-product="02">ADD +</button></div><div class="product-info"><h3>AFTERIMAGE TEE</h3><p>Oversized / 240 GSM</p><strong>$64</strong></div></article>
-        <article class="product"><div class="product-image image-03"><span>NV / 003</span><button class="quick-add" data-product="03">ADD +</button></div><div class="product-info"><h3>UTILITY CARGO</h3><p>Ripstop / Modular fit</p><strong>$148</strong></div></article>
-        <article class="product"><div class="product-image image-04"><span>NV / 004</span><button class="quick-add" data-product="04">ADD +</button></div><div class="product-info"><h3>NOCTVRN CAP</h3><p>6-panel / Embroidered</p><strong>$48</strong></div></article>
+        <article class="product reveal">
+          <div class="product-image image-01">
+            <span>NV / 001</span><small>480 GSM</small>
+            <button class="quick-add" data-product="01">ADD +</button>
+            <div class="garment hoodie"></div>
+          </div>
+          <div class="product-info"><div><h3>VOID HOODIE</h3><p>Heavyweight / 480 GSM</p></div><strong>$128</strong></div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product-image image-02">
+            <span>NV / 002</span><small>240 GSM</small>
+            <button class="quick-add" data-product="02">ADD +</button>
+            <div class="garment tee"></div>
+          </div>
+          <div class="product-info"><div><h3>AFTERIMAGE TEE</h3><p>Oversized / 240 GSM</p></div><strong>$64</strong></div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product-image image-03">
+            <span>NV / 003</span><small>RIPSTOP</small>
+            <button class="quick-add" data-product="03">ADD +</button>
+            <div class="garment cargo"></div>
+          </div>
+          <div class="product-info"><div><h3>UTILITY CARGO</h3><p>Ripstop / Modular fit</p></div><strong>$148</strong></div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product-image image-04">
+            <span>NV / 004</span><small>6 PANEL</small>
+            <button class="quick-add" data-product="04">ADD +</button>
+            <div class="garment cap"></div>
+          </div>
+          <div class="product-info"><div><h3>NOCTVRN CAP</h3><p>6-panel / Embroidered</p></div><strong>$48</strong></div>
+        </article>
       </div>
     </section>
-    <section class="manifesto" id="manifesto"><p class="eyebrow">02 / MANIFESTO</p><div class="manifesto-grid"><h2>LESS<br>NOISE.<br><span>MORE<br>PRESENCE.</span></h2><div><p>NOCTVRN exists between the city lights. We make pieces that feel lived-in before they're worn — stripped back silhouettes, dense fabrics, and details that reveal themselves slowly.</p><p class="small">NO SEASON. NO HYPE CYCLE.<br>JUST THE NEXT PIECE.</p></div></div></section>
-    <section class="lookbook" id="lookbook"><div class="lookbook-card"><div class="lookbook-number">003</div><div><p class="eyebrow">03 / LOOKBOOK</p><h2>THE CITY<br>AFTER 2AM.</h2><p>Cold concrete. Empty streets. One more train home.</p></div><a class="circle-link" href="#shop">VIEW<br>DROP ↗</a></div></section>
-    <section class="newsletter"><p class="eyebrow">04 / STAY AWAKE</p><h2>DON'T MISS<br>THE NEXT DROP.</h2><form id="newsletterForm"><input type="email" placeholder="YOUR EMAIL ADDRESS" required /><button type="submit">JOIN ↗</button></form><p id="formMessage" class="form-message"></p></section>
+
+    <section class="manifesto" id="manifesto">
+      <div class="manifesto-top reveal">
+        <p class="eyebrow">02 / MANIFESTO</p>
+        <span>EST. 2026 / 40.7608° N</span>
+      </div>
+      <div class="manifesto-grid">
+        <h2 class="reveal">LESS<br>NOISE.<br><span>MORE<br>PRESENCE.</span></h2>
+        <div class="reveal">
+          <p>NOCTVRN exists between the city lights. We make pieces that feel lived-in before they're worn — stripped-back silhouettes, dense fabrics, and details that reveal themselves slowly.</p>
+          <p class="small">NO SEASON. NO HYPE CYCLE.<br>JUST THE NEXT PIECE.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lookbook" id="lookbook">
+      <div class="lookbook-card reveal">
+        <div class="lookbook-number">003</div>
+        <div class="lookbook-copy">
+          <p class="eyebrow">03 / LOOKBOOK</p>
+          <h2>THE CITY<br><span>AFTER 2AM.</span></h2>
+          <p>Cold concrete. Empty streets. One more train home.</p>
+        </div>
+        <a class="circle-link" href="#shop">VIEW<br>DROP ↗</a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">04 / STAY AWAKE</p>
+      <h2>DON'T MISS<br><span>THE NEXT DROP.</span></h2>
+      <form id="newsletterForm">
+        <input type="email" placeholder="YOUR EMAIL ADDRESS" aria-label="Email address" required />
+        <button type="submit">JOIN ↗</button>
+      </form>
+      <p id="formMessage" class="form-message"></p>
+    </section>
   </main>
-  <footer><div class="logo">NOCTVRN<span>®</span></div><div class="footer-links"><a href="#">INSTAGRAM</a><a href="#">CONTACT</a><a href="#">SHIPPING</a></div><p>© 2026 NOCTVRN. ALL RIGHTS RESERVED.</p></footer>
-  <aside class="cart" id="cart"><button class="cart-close" id="cartClose">×</button><p class="eyebrow">YOUR BAG</p><h2><span id="cartCount">0</span> OBJECTS</h2><div id="cartItems" class="cart-items"><p class="empty">Your bag is empty.</p></div><div class="cart-total"><span>TOTAL</span><strong id="cartTotal">$0</strong></div><button class="checkout">CHECKOUT ↗</button></aside>
-  <div class="overlay" id="overlay"></div><script src="script.js"></script>
+
+  <footer>
+    <div class="logo">NOCTVRN<span>®</span></div>
+    <div class="footer-links"><a href="#top">BACK TO TOP ↑</a><a href="#shop">SHOP</a><a href="#manifesto">CONTACT</a></div>
+    <p>© 2026 NOCTVRN. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <aside class="cart" id="cart" aria-label="Shopping bag">
+    <button class="cart-close" id="cartClose" aria-label="Close bag">×</button>
+    <p class="eyebrow">YOUR BAG</p>
+    <h2><span id="cartCount">0</span> OBJECTS</h2>
+    <div id="cartItems" class="cart-items"><p class="empty">Your bag is empty.</p></div>
+    <div class="cart-total"><span>TOTAL</span><strong id="cartTotal">$0</strong></div>
+    <button class="checkout" type="button">CHECKOUT ↗</button>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
