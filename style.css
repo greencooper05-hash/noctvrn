@@ -113,3 +113,50 @@ footer{border-top:1px solid var(--line);padding:30px 4.5vw;display:grid;grid-tem
   .product-modal-copy{padding:30px 24px 36px}
   .product-modal-copy h2{font-size:48px}
 }
+
+/* SPACED, EASIER SHOPPING LAYOUT */
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{overflow-x:hidden}
+.nav{position:sticky;top:0;z-index:200;min-height:76px;padding:0 clamp(24px,5vw,72px);backdrop-filter:blur(16px);background:rgba(7,7,7,.84);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav nav{gap:clamp(24px,4vw,54px)}
+.nav nav a,.bag{padding:12px 4px}
+.hero{min-height:calc(100vh - 76px);padding:clamp(80px,11vh,150px) clamp(24px,8vw,120px) clamp(70px,10vh,130px)}
+.hero-copy{max-width:680px}
+.hero-sub{max-width:510px;margin-top:30px;line-height:1.9}
+.cta{margin-top:36px;display:inline-flex;padding-bottom:12px}
+.ticker{margin-top:0}
+.shop{padding:clamp(100px,12vw,180px) clamp(24px,6vw,96px)}
+.section-head{margin-bottom:48px;align-items:end}
+.drop-notice{margin-bottom:70px;padding:28px 0;display:grid;grid-template-columns:auto 1fr minmax(260px,430px);gap:28px;align-items:start;border-top:1px solid #252525;border-bottom:1px solid #252525}
+.drop-notice p{margin:0;line-height:1.8;color:#888;font-size:11px}
+.products{gap:clamp(34px,5vw,76px) clamp(18px,2.5vw,38px)}
+.product{padding-bottom:12px}
+.product-image{min-height:clamp(420px,44vw,650px);border:1px solid #222}
+.product-image.photo{background-size:200% 200%;transition:filter .3s ease}
+.product-image.photo:hover{filter:brightness(1.12)}
+.product-image .quick-add{opacity:1;transform:none}
+.product-info{padding-top:22px;gap:18px}
+.product-info h3{letter-spacing:.1em}
+.product-info p{margin-top:8px}
+.manifesto{padding:clamp(110px,14vw,210px) clamp(24px,8vw,120px)}
+.manifesto-grid{gap:clamp(50px,10vw,160px);padding-top:70px}
+.lookbook{padding:0 clamp(24px,6vw,96px) clamp(110px,14vw,190px)}
+.lookbook-card{min-height:620px;padding:clamp(36px,6vw,90px)}
+.newsletter{padding:clamp(100px,13vw,190px) clamp(24px,8vw,120px)}
+footer{padding:50px clamp(24px,6vw,96px)}
+@media(max-width:850px){
+ .drop-notice{grid-template-columns:1fr;gap:12px}
+ .drop-notice p{max-width:560px}
+ .nav nav{gap:16px}
+ .hero{min-height:80vh}
+ .products{grid-template-columns:1fr 1fr}
+ .product-image{min-height:430px}
+}
+@media(max-width:560px){
+ .nav{padding:0 18px}.nav nav a:nth-child(3){display:none}
+ .nav nav{gap:12px}
+ .hero{padding-top:70px}
+ .products{grid-template-columns:1fr}
+ .product-image{min-height:520px}
+ .shop,.manifesto,.lookbook,.newsletter{padding-left:20px;padding-right:20px}
+}
